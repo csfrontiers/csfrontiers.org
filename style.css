@@ -1,3 +1,9 @@
+/* default style overrides */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
 body {
     background-color: #4c3f75;
     font-family: Arial, Helvetica, sans-serif;
@@ -8,14 +14,25 @@ p {
     text-align: justify;
     line-height: 30px;
 }
+td {
+    padding: 0 25px 25px 25px;
+}
+td:first-child {
+    padding-left: 0;
+}
+td:last-child {
+    padding-right: 0;
+}
+
+/* core content layout */
+
 .title {
     margin-top: 80px;
     margin-bottom: 80px;
-    color: white;
 }
 .menu {
     background-color: #1d1f20;
-    margin: 0 100px 0 100px;
+    margin: 0 200px 0 200px;
     position: -webkit-sticky; /* safari */
     position: sticky;
     top: 0;
@@ -30,26 +47,75 @@ p {
 .menu-item:hover {
     background-color: #363636;
 }
-.content {
+.content, .holo-content {
+    margin: 0 200px 1px 200px;
+    padding: 100px;
+}
+.content, .bottom-bar {
     background-color: #181a1b;
-    margin: 0 100px 1px 100px;
-    padding: 60px;
 }
-.iblock {
+.bottom-bar {
+    height: 50px;
+}
+
+/* custom items/controls */
+
+.button, .vibrant-button {
     display: inline-block;
+    padding: 10px 25px 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
 }
+.button {
+    border: 1px solid #363636;
+}
+.button:hover {
+    background-color: #363636;
+}
+.vibrant-button {
+    background-color: #0f4b72;
+}
+.vibrant-button:hover {
+    background-color: #146296;
+}
+
+.colorbar {
+    display: block;
+    width: 75%;
+    min-width: 150px;
+    height: 3px;
+    margin: 20px auto 30px auto;
+    background-color: rgb(43, 47, 49);
+    background-image: linear-gradient(90deg, rgb(95, 18, 26), rgb(62, 51, 92), rgb(15, 75, 114));
+}
+
+/* style utils */
+
 .center {
     text-align: center;
 }
 .uppercase {
     text-transform: uppercase;
 }
-.colorbar {
-    display: block;
-    width: 66%;
-    min-width: 150px;
-    height: 3px;
-    margin: 20px auto 30px auto;
-    background-color: rgb(43, 47, 49);
-    background-image: linear-gradient(90deg, rgb(95, 18, 26), rgb(62, 51, 92), rgb(15, 75, 114));
+.iblock {
+    display: inline-block;
+}
+.round-outline {
+    border-radius: 50px;
+    border: 1px solid rgb(100, 100, 100);
+}
+.vibrant {
+    color: white;
+}
+
+/* layout utils */
+
+.hflex {
+    display: flex;
+    flex-direction: row;
+}
+.flex-item {
+    flex: 1;
+    margin: 10px;
+    padding: 15px;
 }
