@@ -3,7 +3,7 @@
         {% if page.url == item.link %}
             <div class='menu-item current' onclick="window.scrollTo(0, 0)">{{ item.name }}</div>
         {% else %}
-            <div class='menu-item' onclick="location.href='{{ item.link }}'">{{ item.name }}</div>
+            <div class='menu-item' onclick="location.href='{{ site.baseurl }}{{ item.link }}'">{{ item.name }}</div>
         {% endif %}
     {% endfor %}
 </div>
