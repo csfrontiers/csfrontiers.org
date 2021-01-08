@@ -37,19 +37,25 @@ ul, ol {
 }
 .menu-item {
     display: inline-block;
-    padding: 10px 25px 10px 25px;
-    border-radius: 60px;
+    padding: 5px 15px 5px 15px;
     cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 60px;
 }
-.menu-item:hover, .menu-item.current {
+.dropdown-container:hover .menu-item {
+    border-radius: 10px 10px 0 0;
+}
+.menu-item:hover, .dropdown-item:hover, .dropdown-item.current, .menu-item.current {
     background-color: #b3b3b3;
 }
 .menu, .content, .holo-content {
     margin-left: 5%;
     margin-right: 5%;
 }
-.menu {
+.menu, .dropdown-content {
     background-color: #d1d1d1;
+}
+.menu {
     position: -webkit-sticky; /* safari */
     position: sticky;
     top: 0;
@@ -68,6 +74,25 @@ ul, ol {
 }
 .bottom-bar {
     height: 50px;
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 10000;
+    text-align: left;
+}
+.dropdown-item {
+    display: block;
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;
+}
+.dropdown-container:hover .dropdown-content {
+    display: block;
 }
 
 /* custom items/controls */

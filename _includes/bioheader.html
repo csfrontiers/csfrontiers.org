@@ -1,2 +1,9 @@
+{% if include.link != '' %}
+<a href='{{ include.link }}'>
+{% endif %}
 <img src='{{ include.img }}' width='120px' height='120px' class='round padded bordered'>
+{% if include.link != '' %}
+</a>
+{% endif %}
+
 <h3>{{ include.name }}</h3>

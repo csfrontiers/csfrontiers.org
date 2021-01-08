@@ -1,8 +1,17 @@
 - name: Home
   link: /
+- name: About
+  link: /about.html
 - name: Curriculum
   link: /curriculum.html
 - name: Resources
-  link: /resources.html
+  dropw: 150px
+  drop:
+    - name: Publications
+      link: /publications.html
+    - name: Demos
+      link: /demos.html
+    - name: Tools
+      link: /tools.html
 - name: People
   link: /people.html

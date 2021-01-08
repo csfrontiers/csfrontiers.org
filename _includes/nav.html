@@ -1,9 +1,45 @@
 <div class='menu center'>
     {% for item in site.data.nav %}
-        {% if page.url == item.link %}
-            <div class='menu-item current' onclick="window.scrollTo(0, 0)">{{ item.name }}</div>
-        {% else %}
-            <div class='menu-item' onclick="location.href='{{ site.baseurl }}{{ item.link }}'">{{ item.name }}</div>
+        {% assign iscurrent = false %}
+        {% if item.link and page.url == item.link %}
+            {% assign iscurrent = true %}
+        {% endif %}
+        {% if iscurrent == false and item.drop %}
+            {% for drop in item.drop %}
+                {% if page.url == drop.link %}
+                    {% assign iscurrent = true %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        {% if item.drop %}
+            <div class='dropdown-container'>
+        {% endif %}
+
+        <div class='menu-item {% if iscurrent == true %}current{% endif %}'
+            {% if item.link %}
+                {% if page.url == item.link %}
+                    onclick="window.scrollTo(0, 0)"
+                {% else %}
+                    onclick="location.href='{{ site.baseurl }}{{ item.link }}'"
+                {% endif %}
+            {% endif %}
+        >{{ item.name }}</div>
+
+        {% if item.drop %}
+            <div class='dropdown-content' style='width: {{ item.dropw }}'>
+            {% for drop in item.drop %}
+                <div class='dropdown-item {% if page.url == drop.link %}current{% endif %}'
+                    {% if page.url == drop.link %}
+                        onclick="window.scrollTo(0, 0)"
+                    {% else %}
+                        onclick="location.href='{{ site.baseurl }}{{ drop.link }}'"
+                    {% endif %}
+                >{{ drop.name }}</div>
+            {% endfor %}
+            </div>
+
+            </div>
         {% endif %}
     {% endfor %}
 </div>
