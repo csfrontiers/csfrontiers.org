@@ -1,13 +1,13 @@
 <div class='menu center'>
     {% for item in site.data.nav %}
-        {% assign iscurrent = false %}
+        {% assign isselected = false %}
         {% if item.link and page.url == item.link %}
-            {% assign iscurrent = true %}
+            {% assign isselected = true %}
         {% endif %}
-        {% if iscurrent == false and item.drop %}
+        {% if isselected == false and item.drop %}
             {% for drop in item.drop %}
                 {% if page.url == drop.link %}
-                    {% assign iscurrent = true %}
+                    {% assign isselected = true %}
                 {% endif %}
             {% endfor %}
         {% endif %}
@@ -16,7 +16,7 @@
             <div class='dropdown-container'>
         {% endif %}
 
-        <div class='menu-item {% if iscurrent == true %}current{% endif %}'
+        <div class='menu-item {% if isselected == true %}selected{% endif %}'
             {% if item.link %}
                 {% if page.url == item.link %}
                     onclick="window.scrollTo(0, 0)"
@@ -29,7 +29,7 @@
         {% if item.drop %}
             <div class='dropdown-content' style='width: {{ item.dropw }}'>
             {% for drop in item.drop %}
-                <div class='dropdown-item {% if page.url == drop.link %}current{% endif %}'
+                <div class='dropdown-item {% if page.url == drop.link %}selected{% endif %}'
                     {% if page.url == drop.link %}
                         onclick="window.scrollTo(0, 0)"
                     {% else %}

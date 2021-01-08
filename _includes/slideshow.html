@@ -1,0 +1,8 @@
+<div id='{{ include.src }}' class='slideshow' style='height: {{ include.height }}'>
+    {% for entry in site.data[include.src] %}
+        <img src='{{ entry.img }}' class='slideshow-img'>
+    {% endfor %}
+
+    <div class='slideshow-prev' onclick="slideshowPrev('{{ inclide.src }}')">&#10094;</div>
+    <div class='slideshow-next' onclick="slideshowNext('{{ include.src }}')">&#10095;</div>
+</div>
