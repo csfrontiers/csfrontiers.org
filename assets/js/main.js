@@ -1,10 +1,12 @@
 function setSlideshowSlide(id, n) {
-    const slides = document.querySelectorAll('.slideshow > .slideshow-img');
+    const slideshow = document.getElementById(id);
+    const slides = slideshow.getElementsByClassName('slideshow-content');
     for (const slide of slides) slide.style.display = 'none';
     slides[n].style.display = 'block';
 }
 function slideshowNext(id) {
-    const slides = document.querySelectorAll('.slideshow > .slideshow-img');
+    const slideshow = document.getElementById(id);
+    const slides = slideshow.getElementsByClassName('slideshow-content');
     let index = -1;
     for (let i = 0; i < slides.length; ++i) {
         if (slides[i].style.display === 'block') { index = i; break; }
@@ -12,7 +14,8 @@ function slideshowNext(id) {
     setSlideshowSlide(id, (index + 1) % slides.length);
 }
 function slideshowPrev(id) {
-    const slides = document.querySelectorAll('.slideshow > .slideshow-img');
+    const slideshow = document.getElementById(id);
+    const slides = slideshow.getElementsByClassName('slideshow-content');
     let index = slides.length;
     for (let i = 0; i < slides.length; ++i) {
         if (slides[i].style.display === 'block') { index = i; break; }

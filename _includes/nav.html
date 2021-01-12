@@ -24,6 +24,7 @@
                     onclick="location.href='{{ site.baseurl }}{{ item.link }}'"
                 {% endif %}
             {% endif %}
+            onselectstart='return false'
         >{{ item.name }}</div>
 
         {% if item.drop %}
@@ -35,6 +36,7 @@
                     {% else %}
                         onclick="location.href='{{ site.baseurl }}{{ drop.link }}'"
                     {% endif %}
+                    onselectstart='return false'
                 >{{ drop.name }}</div>
             {% endfor %}
             </div>
