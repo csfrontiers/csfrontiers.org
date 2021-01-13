@@ -17,6 +17,12 @@
         {% endif %}
     {% endfor %}
 
+    <div class='slideshow-dot-container center' onselectstart='return false'>
+    {% for entry in site.data[include.src] %}
+        <div class='slideshow-dot' onclick="setSlideshowSlide('{{ myslideshowid }}', {{ forloop.index | minus:1 }})"></div>
+    {% endfor %}
+    </div>
+
     <div class='slideshow-prev' onclick="slideshowPrev('{{ myslideshowid }}')" onselectstart='return false'>&#10094;</div>
     <div class='slideshow-next' onclick="slideshowNext('{{ myslideshowid }}')" onselectstart='return false'>&#10095;</div>
 </div>

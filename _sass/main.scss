@@ -157,6 +157,23 @@ ul, ol {
     height: 100%;
     object-fit: cover;
 }
+.slideshow-dot-container {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+}
+.slideshow-dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slideshow-dot.selected {
+    background-color: rgba(255, 255, 255, 0.4);
+}
 .slideshow-desc-box {
     position: absolute;
     bottom: 30px;

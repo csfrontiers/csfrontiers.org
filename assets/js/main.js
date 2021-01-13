@@ -1,8 +1,11 @@
 function setSlideshowSlide(id, n) {
     const slideshow = document.getElementById(id);
     const slides = slideshow.getElementsByClassName('slideshow-content');
+    const dots = slideshow.getElementsByClassName('slideshow-dot');
     for (const slide of slides) slide.style.display = 'none';
+    for (const dot of dots) dot.classList.remove('selected');
     slides[n].style.display = 'block';
+    dots[n].classList.add('selected');
 }
 function slideshowNext(id) {
     const slideshow = document.getElementById(id);
