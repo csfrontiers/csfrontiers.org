@@ -1,0 +1,5 @@
+image sources:
+brain-circuit - https://pixabay.com/vectors/anatomy-biology-brain-thought-mind-1751201/
+iot-cloud - https://pixabay.com/vectors/network-iot-internet-of-things-782707/
+car-laptop - https://pixabay.com/photos/engineer-engineering-4941343/
+server-room - https://pixabay.com/photos/network-server-system-2402637/

@@ -1,3 +1,5 @@
+const SLIDESHOW_TIME = 10000;
+
 function setSlideshowSlide(id, n) {
     const slideshow = document.getElementById(id);
     const slides = slideshow.getElementsByClassName('slideshow-content');
@@ -28,6 +30,23 @@ function slideshowPrev(id) {
 
 window.addEventListener('load', () => {
     for (const slideshow of document.getElementsByClassName('slideshow')) {
-        setSlideshowSlide(slideshow.id, 0);
+        const id = slideshow.id;
+        setSlideshowSlide(id, 0);
+
+        let timerId = undefined;
+        const animator = function () {
+            slideshowNext(id);
+            timerId = setTimeout(animator, SLIDESHOW_TIME);
+        };
+        timerId = setTimeout(animator, SLIDESHOW_TIME);
+        slideshow.addEventListener('mouseenter', () => {
+            if (timerId) {
+                clearTimeout(timerId);
+                timerId = undefined;
+            }
+        });
+        slideshow.addEventListener('mouseleave', () => {
+            if (!timerId) timerId = setTimeout(animator, SLIDESHOW_TIME);
+        });
     }
 });
