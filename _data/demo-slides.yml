@@ -2,10 +2,10 @@
   desc: Read and process information from online databases accross the world. This project plots data for new COVID-19 cases and deaths for any state.
   link: https://editor.netsblox.org/?action=present&Username=ledeczi&ProjectName=COVID-19Daily&editMode=true#
 - img: assets/images/screenshot-hidden-figures.jpeg
-  desc: Ask input from the user to control a simple search engine backed by the IMDb movie database.
+  desc: Ask input from the user to control a simple search engine backed by TMDB (The Movie Database).
   link: https://editor.netsblox.org/?action=example&ProjectName=CastShow&editMode=true
 - img: assets/images/screenshot-star-map.jpeg
-  desc: Explore the night sky by accessing detailed images from oribital telescopes.
+  desc: Explore the night sky by accessing detailed images from the Sloan Digital Sky Survey.
   link: https://editor.netsblox.org/#present:Username=ledeczi&ProjectName=MyStarMap&editMode=true
 - img: assets/images/screenshot-street-view.jpeg
   desc: Leverage the power of Google Maps and various location services to create your own custom Google Street View interface. 

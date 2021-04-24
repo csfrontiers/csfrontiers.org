@@ -2,7 +2,7 @@
 {% for entry in site.data[include.src] %}
     <div class='center flex-item'>
         {% if entry.link %}
-        <a href='{{ entry.link }}'>
+        <a href='{{ entry.link }}' target='_blank'>
         {% endif %}
 
         <img src='assets/images/{{ entry.firstname | downcase }}-{{ entry.lastname | downcase }}.jpeg' width='120px' height='120px' class='round padded bordered'>
