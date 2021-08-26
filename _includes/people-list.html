@@ -11,7 +11,7 @@
         </a>
         {% endif %}
 
-        <h3>{{ entry.firstname }} {{ entry.lastname }}</h3>
+        <h3>{{ entry.firstname }} {% if entry.nickname %} ({{ entry.nickname }}) {% endif %} {{ entry.lastname }}</h3>
     </div>
 {% endfor %}
 </div>

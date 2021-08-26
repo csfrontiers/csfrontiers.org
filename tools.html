@@ -5,8 +5,8 @@ layout: default
     {% include title.html text='Tools' %}
 
     <div class='hflex'>
-        <div class='center flex-item'>
-            <img src='assets/images/netsblox-logo.png' width='120px'>
+        <div class='center flex-item two-column'>
+            <img src='assets/images/netsblox-logo.svg' width='120px'>
             <h2 class='center'>NetsBlox</h2>
             <p>
                 NetsBlox is an open-source web- and cloud-based visual programming environment.
@@ -30,13 +30,22 @@ layout: default
             </p>
 
             <div class='center'>
-                <div class='iblock container' style='width: 95%'>
-                    <iframe src="https://netsblox.org" width="100%" height="400px" frameborder="0"></iframe>
+                <div class='iblock container darkhalo' style='width: 95%'>
+                    <iframe src="https://netsblox.org" width="100%" height="300px" frameborder="0"></iframe>
                     <a href='https://netsblox.org' target='_blank'><div class='overlay'></div></a>
                 </div>
             </div>
+
+            <h3 class='top-spaced'>NetsBlox Editor</h3>
+            <p>
+                If you prefer a more hands-on learning experience, there is plenty of information built into the <a href='https://editor.netsblox.org' target='_blank'>NetsBlox editor</a> to introduce you to some of the new features it has added to Snap!
+                Drag and drop any block from the left menu into the center; you can click on any block to execute it individually, or connect them together to perform complex logic.
+                One of the primary focuses of NetsBlox is the <strong>Network</strong> tab in the upper left corner, which has many advanced blocks for performing complex internet exchanges in a way that is still extremely simple.
+                If you're ever unsure of how to use a block, you can right click it and select <strong>help...</strong> for more information.
+                You can also view the official <a href='https://editor.netsblox.org/docs/'>NetsBlox documentation</a> for more detailed information about how to use certain services/RPCs, as well as some general information and walkthroughs.
+            </p>
         </div>
-        <div class='center flex-item'>
+        <div class='center flex-item two-column'>
             <img src='assets/images/phoneiot-logo.png' width='120px'>
             <h2 class='center'>PhoneIoT</h2>
             <p>
@@ -45,7 +54,8 @@ layout: default
                 The PhoneIoT service allows access to many of the device's sensors (e.g., accelerometer, orientation, location, camera), as well as the ability to customize the app's display with interactive components such as buttons, image displays, joysticks, and more, all from within NetsBlox.
                 PhoneIoT uses the same RPC and message passing paradigms used by other NetsBlox services, making PhoneIoT relatively easy to pick up for students who are already familiar with NetsBlox.
             </p>
-            <h3>Getting Started</h3>
+            <img class='darkhalo' src='assets/images/phoneiot-play-store.png' width='65%'>
+            <h3 class='top-spaced'>Getting Started with PhoneIoT</h3>
             <p>
                 To get started, simply install the PhoneIoT app on your mobile device, which is available free of charge through the App Store (iOS) or Google Play store (Android).
                 Once installed, lauch the app; you should see an open menu on the left side of the screen.
@@ -60,13 +70,4 @@ layout: default
             </p>
         </div>
     </div>
-
-    <h2 class='center top-spaced'>NetsBlox Editor</h2>
-    <p>
-        If you prefer a more hands-on learning experience, there is plenty of information built into the <a href='https://editor.netsblox.org' target='_blank'>NetsBlox editor</a> to introduce you to some of the new features it has added to Snap!
-        Drag and drop any block from the left menu into the center; you can click on any block to execute it individually, or connect them together to perform complex logic.
-        One of the primary focuses of NetsBlox is the <strong>Network</strong> tab in the upper left corner, which has many advanced blocks for performing complex internet exchanges in a way that is still extremely simple.
-        If you're ever unsure of how to use a block, you can right click it and select <strong>help...</strong> for more information.
-        You can also view the official <a href='https://editor.netsblox.org/docs/'>NetsBlox documentation</a> for more detailed information about how to use certain services/RPCs, as well as some general information and walkthroughs.
-    </p>
 </div>
