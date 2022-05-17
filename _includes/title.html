@@ -1,6 +1,6 @@
 <div class='center'>
-    <div class='iblock'>
-        <h1>{{ include.text }}</h1>
+    <div class='iblock {{ include.topclasses | default: "" }}'>
+        <{{ include.level | default: 'h1' }}>{{ include.text }}</{{ include.level | default: 'h1' }}>
         <div class='colorbar'></div>
     </div>
 </div>
